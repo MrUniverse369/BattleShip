@@ -84,32 +84,8 @@ int main()
 		turnCount = (turnCount > 0) ? 0 : 1;
 		ShowGameBoard(PlayerOnegameBoard, PlayerTwogameBoard);
 
-	} while (!gameOver(PlayerOnegameBoard,PlayerTwogameBoard));
+	} while (!gameOver(PlayerOnegameBoard, PlayerTwogameBoard));
 
-	/*	Setup();
-		DisplayPlayerGameBoard();
-		do
-		{
-
-			SwitchTurns();
-			GetPlayerInput();
-			updateGameInternals(playerInput);
-			DisplayPlayerGameBoard();
-			if (!IsGameOver())
-			{
-
-
-				SwitchTurns();
-				GetPlayerInput();
-				updateGameInternals(playerInput);
-				DisplayPlayerGameBoard();
-			}
-			else
-			{
-				break;
-			}
-
-		} while (!IsGameOver());*/
 	system("pause");
 };
 
@@ -233,7 +209,7 @@ bool gameOver(GameBoardManager gameBoardObject1, GameBoardManager gameBoardObjec
 	bool isGameOver = false;
 	if (gameBoardObject1.m_score == 5)
 	{
-		std::cout << gameBoardObject1.getName()<<" has Won!!!!!";
+		std::cout << gameBoardObject1.getName() << " has Won!!!!!";
 		isGameOver = true;
 	}
 	if (gameBoardObject2.m_score == 5)
